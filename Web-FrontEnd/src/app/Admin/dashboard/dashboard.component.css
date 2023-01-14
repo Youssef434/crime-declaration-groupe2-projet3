@@ -1,0 +1,81 @@
+header {
+  background-color: #8f2424;
+}
+
+* {
+  background-color: rgb(34, 31, 31);
+  color: white;
+}
+.clearfix {
+  background-color: #8f2424;
+}
+
+.copyright {
+  background-color: #8f2424;
+}
+
+.panel-heading h2 {
+  text-align: center;
+  font-size: 50px;
+  margin-left: -100px;
+  margin-bottom: 50px;
+}
+
+.panel-body {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 80px;
+  box-shadow: 0 13px 40px -13px rgba(0, 0, 0, 0.75);
+}
+
+.panel {
+  width: 73%;
+  margin-left: 23%;
+}
+
+.sidebar-container {
+  position: fixed;
+  left: 0;
+  top: 70px;
+  width: 20%;
+  height: 90vh;
+  background-color: #8f2424;
+  opacity: 0.8;
+  z-index: 6;
+}
+
+.body-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-bottom {
+  z-index: 7;
+  position: relative;
+}
+
+.side-btn {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 80px;
+  height: 50px;
+  border-radius: 15px;
+  border: 2px solid #000000;
+  background-color: transparent;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  box-shadow: 0 13px 40px -13px rgba(0, 0, 0, 0.75);
+}
+.active-btn {
+  background-color: white;
+  color: black;
+  opacity: 1;
+}
+
+.add-officier {
+  width: 73%;
+  margin-left: 23%;
+  margin-bottom: 50px;
+}

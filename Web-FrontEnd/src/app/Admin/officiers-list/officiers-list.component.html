@@ -1,0 +1,37 @@
+<button (click)="closeDetailSection()" *ngIf="showDetails == true">Back</button>
+<div class="panel-heading" *ngIf="showDetails == false">
+    <h2>Liste des Policiers</h2>
+</div>
+<div class="panel-body" *ngIf="showDetails == false">
+    <table id="example" class="table table-striped table-bordered table-sm row-border hover" cellspacing="0">
+
+        <thead>
+            <tr>
+                <th>Profil</th>
+                <th>Matricule</th>
+                <th>First Name</th>
+                <th>last Name</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let officier of Officiers" style="color: white;">
+                <td style="color: white;">Officier</td>
+                <td style="color: white;">pol-00{{officier.id}}</td>
+                <td style="color: white;">{{officier.firstName}}</td>
+                <td style="color: white;">{{officier.lastName}}</td>
+                <td style="color: white;">{{officier.username}}</td>
+
+                <td>
+                    <button style='margin-right:16px' class="btn btn-danger"
+                        (click)="showOfficierDetails(officier.id)">Details</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="officier-details" *ngIf="showDetails == true">
+    <app-officer-details [officier]="Officiers[officerIndex]"></app-officer-details>
+</div>

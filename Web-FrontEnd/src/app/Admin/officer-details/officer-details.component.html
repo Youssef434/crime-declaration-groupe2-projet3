@@ -1,0 +1,40 @@
+<h2>Officier Details :</h2>
+<div class="field-row">
+    <div class="field">
+        <h1>First Name :</h1>
+        <h1>{{officier?.firstName}}</h1>
+    </div>
+
+    <div class="field">
+        <h1>Last Name :</h1>
+        <h1>{{officier?.lastName}}</h1>
+    </div>
+</div>
+<div class="field-row">
+    <div class="field">
+        <h1>Matricule :</h1>
+        <h1>pol-00{{officier?.id }}</h1>
+    </div>
+
+    <div class="field">
+        <h1>Email :</h1>
+        <h1>{{officier?.username}}</h1>
+    </div>
+</div>
+<div class="field-row">
+    <div class="field">
+        <h1>Statut Actuel :</h1>
+        <h1>{{officier?.status}}</h1>
+    </div>
+
+    <div class="field">
+        <h1>date de Mise EnService :</h1>
+        <h1>{{officier?.dateMiseEnService}}</h1>
+    </div>
+</div>
+
+<div class="localisation">
+    <h1>Localisation Actuelle :</h1>
+    <app-map [localisation]="officier?.localisation!"
+        [description]="officier?.firstName + ' ' + officier?.lastName"></app-map>
+</div>

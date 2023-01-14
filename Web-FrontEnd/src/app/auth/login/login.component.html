@@ -1,0 +1,50 @@
+<header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+        <h1 class="logo me-auto"><a routerLink="/home">CRIMINALS</a></h1>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="getstarted scrollto" routerLink="/login">Sign In </a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+    </div>
+</header>
+<div style="width: 100%; height:100px; background-color: rgb(34, 31, 31);"></div>
+<div class="container-fluid" style="background-color: rgb(34, 31, 31);">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="../../../assets/img/login-icon.svg" height="100%" width="100%" alt="">
+        </div>
+        <div class="col-md-4 mt-3 mb-2">
+            <h3 class=" text-center"><b>Welcome To your Admin Space</b></h3>
+
+            <form action="" class="mt-5 p-5">
+                <h5 class="mb-3">Login </h5>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="Username" name="username"
+                        [(ngModel)]="username">
+                    <label for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
+                        name="password" [(ngModel)]="password">
+                    <label for="floatingPassword">Password</label>
+                </div>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button type="button" class="btn-login" (click)="login()">Login</button>
+                </div>
+
+            </form>
+
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+</div>
+<div style="width: 100%; height:100px;background-color: rgb(34, 31, 31);"></div>
+<footer id="footer">
+
+    <div class="container footer-bottom clearfix">
+        <div class="copyright">Copyright &copy; CRIMINALS <strong><span>2022</span></strong>. All Rights Reserved</div>
+    </div>
+</footer>

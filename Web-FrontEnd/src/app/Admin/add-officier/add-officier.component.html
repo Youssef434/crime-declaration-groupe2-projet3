@@ -1,0 +1,35 @@
+<div class="panel-heading" style="text-align: center;">
+    <h1>Nouveau Policier</h1>
+</div>
+<form action="" class="mt-5 p-5">
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingInput" placeholder="Username" name="firstName"
+            [(ngModel)]="signuprequest.firstName">
+        <label for="floatingInput">First name</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingInput" placeholder="Username" name="lastName"
+            [(ngModel)]="signuprequest.lastName">
+        <label for="floatingInput">Last name</label>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingInput" placeholder="Username" name="username"
+            [(ngModel)]="signuprequest.username">
+        <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password"
+            [(ngModel)]="signuprequest.password">
+        <label for="floatingPassword">Password</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password"
+            [(ngModel)]="signuprequest.confirmpassword">
+        <label for="floatingPassword">Confirm Password</label>
+    </div>
+
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button type="button" class="register-button" (click)="signup()">Register</button>
+    </div>
+</form>

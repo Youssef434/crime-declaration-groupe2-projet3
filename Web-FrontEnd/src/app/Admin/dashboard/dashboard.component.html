@@ -1,0 +1,50 @@
+<header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center" style="background-color: #8f2424;">
+        <h1 class="logo me-auto"><a routerLink="/home" style="background-color: #8f2424;">CRIMINALS</a></h1>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li style="background-color: #8f2424;"><a class="getstarted scrollto"
+                        style="background-color: #8f2424;">{{admin.fullName}} </a></li>
+                <li style="background-color: #8f2424;"><a class="getstarted scrollto" routerLink="/login"
+                        style="background-color: #8f2424;">Log Out </a>
+                </li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+    </div>
+</header>
+<div style="width: 100%; height:150px"></div>
+<div class="body-container">
+
+
+    <div class="sidebar-container">
+        <button type="button" class="side-btn" (click)="handleSideBarClick(0)"
+            [ngClass]="{'active-btn': appState== 0}">Officier's List</button> <br>
+        <button type="button" class="side-btn" (click)="handleSideBarClick(1)"
+            [ngClass]="{'active-btn': appState== 1}">Declarations</button> <br>
+        <button type="button" class="side-btn" (click)="handleSideBarClick(2)"
+            [ngClass]="{'active-btn': appState== 2}">Add New Officier</button>
+
+
+    </div>
+    <div class="panel panel-primary" *ngIf="appState == 0">
+        <app-officiers-list [Officiers]="Officiers"></app-officiers-list>
+        <div style="width: 100%; height:10px;background-color: rgb(34, 31, 31);"></div>
+
+    </div>
+    <div *ngIf="appState == 1" style="width: 73%;height: 80vh;" class="add-officier">
+        <app-declarations-list [declarations]="declarations"></app-declarations-list>
+    </div>
+    <div *ngIf="appState == 2" style="width: 73%;height: 80vh;" class="add-officier">
+        <app-add-officier></app-add-officier>
+    </div>
+</div>
+<footer id="footer">
+
+
+    <div class="container footer-bottom clearfix">
+        <div class="copyright">Copyright &copy; CRIMINALS <strong><span
+                    style="background-color: #8f2424;">2022</span></strong>. All Rights
+            Reserved</div>
+    </div>
+</footer>

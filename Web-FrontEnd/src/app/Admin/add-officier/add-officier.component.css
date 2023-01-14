@@ -1,0 +1,21 @@
+form {
+  color: #000000;
+}
+h1 {
+  font-size: 50px;
+}
+
+.register-button {
+  width: 130px;
+  height: 40px;
+  border-radius: 30px;
+  border: 2px solid white;
+  background-color: #8f2424;
+  color: white;
+}
+
+.register-button:hover {
+  cursor: pointer;
+  background-color: #6d1b1b;
+  color: white;
+}
